@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+/*HTML and Body*/
+html {
+    font-family: sans-serif;
+}
+body {
+    margin: 0px;
+    margin-right: 16px;
+}
+h1, h2, h3 {
+    display: grid;
+    margin: 0px;
+    padding: 12px 8px 8px;
+    min-width: 128px;
+}
+p {
+    margin: 0px;
+    padding: 0px 8px 8px;
+    line-height: 1.4;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/*Background Colors*/
+html {background-color: rgb(20, 23, 33);}
+nav.horizontal header, 
+    section.main {background-color: rgb(56, 59, 68);}
+nav.horizontal ul,
+    section.icon,
+    section.icons {background-color: rgb(40, 43, 52);}
+nav.horizontal li:hover {background-color: rgb(46, 51, 77);}
+section.main aside {background-color: rgb(48, 51, 60);}
+section.icons img,
+    section.icon img {background-color: rgb(240, 240, 240);}
+section.icons img:hover,
+    section.icon img:hover {background-color: white}
+
+/*Text Size and Color*/
+html, nav.horizontal li:hover, section.main aside nav a:hover {color: rgb(240, 240, 240);}
+nav.horizontal ul {font-size: 16px;}
+nav.horizontal li, section.main aside nav a {color: rgb(211, 211, 211);}
+
+section.main aside nav a, ul#LoB li {font-size: 14px;}
+dt {font-size: 18px;}
+
+/*Horizontal Navigation*/
+nav.horizontal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 130px auto;
+    grid-template-rows: auto;
+    grid-template-areas: "img header";
+}
+nav.horizontal header {grid-area: header;}
+nav.horizontal img {grid-area: img;}
+
+nav.horizontal img {
+    display: block;
+    width: 100%;
+}
+section.header {
+    padding: 8px 16px;
+}
+nav.horizontal ul {
+    width: 100%;
+    text-align: center;
+}
+nav.horizontal ul::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+nav.horizontal li {
+    width: 25%;
+    min-width: 80px;
+    padding: 8px 0px;
+    float: right;
+}
+nav.horizontal li:hover {
+    text-decoration: underline;
+}
+
+/*Main Section*/
+section.main {
+    width: auto;
+    clear: both;
+    margin-top: 0px;
+    margin-left: 130px;
+    padding: 8px 16px;
+}
+section.main > img {
+    width: 70%;
+    padding: 0px 8px 8px;
+}
+section.main header {
+    justify-self: center;
+    margin: 0px auto;
+    padding: 0px 8px 8px;
+}
+section.main header::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+section.main aside {
+    width: 256px;
+    padding: 8px;
+    border: 3px solid rgb(38, 41, 50);
+    float: right;
+}
+section.main aside nav {
+    padding-left: 16px;
+}
+section.main aside nav li {
+    padding-bottom: 8px
+}
+section.main aside nav a {
+    text-decoration: none;
+}
+section.main aside nav a:hover {
+    text-decoration: underline;
+}
+
+/*Icon Section*/
+section.icon, section.icons {
+    display: grid;
+    margin: 0px 8px 8px;
+    border-radius: 20%;
+    float: left;
+}
+section.icons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "icon1 icon2"
+                        "p p";
+    grid-area: icon;
+}
+section.icons a#icon1 {grid-area: icon1;}
+section.icons a#icon2 {grid-area: icon2;}
+section.icons p {grid-area: p;}
+
+section.icon a, section.icons a {
+    display: block;
+    justify-self: center;
+    margin: auto;
+    padding: 8px;
+}
+section.icons a#icon1 {
+    justify-self: right;
+}
+section.icons a#icon2 {
+    justify-self: left;
+}
+section.icons img, section.icon img {
+    display: block;
+    width: 52px;
+    max-width: 52px;
+    min-width: 52px;
+    padding: 4px;
+    border-radius: 100%;
+}
+section.icon p, section.icons p {
+    display: block;
+    clear: both;
+    padding: 0px 8px 8px;
+}
+
+/*List Of Blocks & Mobs*/
+ul#LoB {
+    display: grid;
+    grid-auto-columns: 288px;
+    grid-template-columns: repeat(auto-fill, 288px);
+}
+ul#LoB li {
+    align-self: center;
+    margin: 0px 8px 8px 10px;
+    padding: 0px;
+}
+ul#LoB img {
+    vertical-align: middle;
+    width: 24px;
+    margin: 0px 8px;
+}
+section.main > img.mob {
+    width: auto;
+    height: 304px;
+    margin-bottom: 16px;
+}
+
+/*Description List*/
+dl {
+    display: grid;
+    width: 600px;
+    margin: 0px;
+}
+dt {
+    display: block;
+    padding: 12px 8px 8px;
+    font-weight: 600;
+}
+dd {
+    display: block;
+    margin: 0px 8px 8px 16px;
+}
+dd img {
+    display: block;
+    width: 570px;
+}
